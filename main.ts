@@ -8,10 +8,10 @@ function blink (位置: number, 色リスト: any[], 間隔: number) {
 let 色セット: number[] = []
 let strip: neopixel.Strip = null
 let 葉の色 = neopixel.rgb(0, 255, 0)
-let 幹の色 = neopixel.rgb(116, 80, 48)
+let 幹の色 = neopixel.colors(NeoPixelColors.Orange)
 let 空の色 = neopixel.rgb(0, 0, 0)
 strip = neopixel.create(DigitalPin.P1, 256, NeoPixelMode.RGB)
-strip.setBrightness(5)
+strip.setBrightness(16)
 tree.firTree(幹の色, 葉の色, 空の色)
 basic.forever(function () {
     色セット = [
